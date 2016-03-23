@@ -29,7 +29,7 @@ class SearchBehavior extends Behavior {
 		$this->weights = $this->maybeGetConfig($config, 'weights');
 		$this->contain = $this->maybeGetConfig($config, 'contain');
 		$this->select  = $this->maybeGetConfig($config, 'select');
-		$this->tableName = $this->_table->table();
+		$this->tableName = $this->_table->alias();
 	}
 
 	public function textSearch($searchString, $order = [])
